@@ -1,0 +1,40 @@
+{
+  "name": "contact-keeper",
+  "version": "1.0.0",
+  "description": "Contact keeper",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "server" : "nodemon server.js",
+    "client" :"npm start --prefix client",
+    "clientinstall" : "npm install --prefix client",
+    "dev" : "concurrently \"npm run server\" \"npm run client\"" ,
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanskovich/contact-keeper.git"
+  },
+  "keywords": [
+    "Contact",
+    "Keeper"
+  ],
+  "author": "Bryanskovich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bryanskovich/contact-keeper/issues"
+  },
+  "homepage": "https://github.com/bryanskovich/contact-keeper#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.0.0",
+    "config": "^3.2.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.6",
+    "nodemon": "^1.19.4"
+  }
+
+}
